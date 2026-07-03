@@ -37,3 +37,11 @@ CREATE OR REPLACE STAGE HEALTHCARE_STG
 
 SHOW STAGES;
 SHOW FILE FORMATS;
+
+-- =========================
+-- verify CSV loaded to S3
+-- =========================
+list @HEALTHCARE_STG
+
+
+
