@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: silver
+    database: HEALTHCARE_DB
+    schema: SILVER
+    tables:
+      - name: SURVEY
