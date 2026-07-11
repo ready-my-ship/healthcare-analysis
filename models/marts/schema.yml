@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: dim_hospital
+    description: "Dimension table containing one record per hospital."
+
+    columns:
+      - name: PROVIDER_ID
+        description: "Unique identifier for each hospital."
+        tests:
+          - unique
+          - not_null
+
+      - name: HOSPITAL_NAME
+        description: "Official hospital name."
+
+  - name: dim_survey
+    description: "Dimension table containing one record per survey measure."
+
+    columns:
+      - name: MEASURE_ID
+        description: "Unique identifier for each survey measure."
+        tests:
+          - unique
+          - not_null
+
+      - name: QUESTION
+        description: "Survey question presented to patients."
+
+      - name: ANSWER_DESCRIPTION
+        description: "Possible response category for the survey measure."
+
+  - name: fact_patient_survey
+    description: "Fact table containing hospital survey results and performance metrics."
+
+    columns:
+      - name: PROVIDER_ID
+        description: "Foreign key to dim_hospital."
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_hospital')
+                field: PROVIDER_ID
+
+      - name: MEASURE_ID
+        description: "Foreign key to dim_survey."
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_survey')
+                field: MEASURE_ID
+
+      - name: ANSWER_PERCENT
+        description: "Percentage of patients selecting the specified response."
+
+      - name: LINEAR_MEAN_VALUE
+        description: "CMS linear mean score."
+
+      - name: PATIENT_SURVEY_STAR_RATING
+        description: "CMS star rating."
+
+      - name: NUMBER_OF_COMPLETED_SURVEYS
+        description: "Number of completed patient surveys."
+
+      - name: SURVEY_RESPONSE_RATE_PERCENT
+        description: "Survey response rate percentage."
+
+      - name: MEASURE_START_DATE
+        description: "Beginning of the reporting period."
+
+      - name: MEASURE_END_DATE
+        description: "End of the reporting period."
