@@ -1,8 +1,7 @@
-# 🏥 Healthcare Patient Survey Analytics Platform
+# Healthcare Patient Survey Analytics Engineering Project
 
-An end-to-end Analytics Engineering project that ingests CMS Hospital Patient Survey data into Snowflake, transforms it using dbt following the Medallion Architecture (Bronze → Silver → Gold), and prepares a dimensional star schema for reporting in Power BI.
-
-This project demonstrates modern data engineering and analytics engineering practices including cloud storage, ELT pipelines, dimensional modeling, data quality testing, Git workflows, and business-ready reporting.
+This project demonstrates an end-to-end Analytics Engineering workflow using AWS S3, Snowflake, dbt, SQL, Git, and Power BI. Raw CMS Hospital Patient Survey data is ingested, transformed using a Medallion Architecture, modeled into a dimensional star schema, 
+and prepared for business intelligence reporting.
 
 ---
 
