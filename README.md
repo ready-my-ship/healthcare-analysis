@@ -9,7 +9,7 @@ and prepared for business intelligence reporting.
 
 This project simulates a production healthcare analytics pipeline.
 
-Raw patient survey data is loaded from AWS S3 into Snowflake before being transformed through multiple data layers using dbt. The final Gold layer exposes a clean star schema optimized for BI reporting and analytical queries.
+Raw patient survey data is loaded from AWS S3 into Snowflake before being transformed through multiple data layers using dbt. The final Gold layer demonstrates a clean star schema optimized for BI reporting and analytical queries.
 
 The project focuses on creating reusable, tested data models that support healthcare quality analysis.
 
