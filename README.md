@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/dashboard_hero.png" alt="Healthcare Dashboard" width="1000"/>
+</p>
+
 # Healthcare Patient Survey Analytics Engineering Project
 
 This project demonstrates an end-to-end Analytics Engineering workflow using AWS S3, Snowflake, dbt, SQL, Git, and Power BI. Raw CMS Hospital Patient Survey data is ingested, transformed using a Medallion Architecture, modeled into a dimensional star schema, 
