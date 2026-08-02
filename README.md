@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/dashboard_hero.png" alt="Healthcare Dashboard" width="1000"/>
+  <img src="images/power_bi_executive_overview.png" alt="Healthcare Dashboard" width="1000"/>
 </p>
 
 # Healthcare Patient Survey Analytics Engineering Project
@@ -10,6 +10,10 @@ and prepared for business intelligence reporting.
 ---
 
 # Project Overview
+
+## Solution Architecture
+
+![Healthcare Pipeline Architecture](images/healthcare_pipeline_architecture_diagram.png)
 
 This project simulates a production healthcare analytics pipeline.
 
@@ -43,6 +47,10 @@ This project transforms the source data into an analytics-ready warehouse that e
 ---
 
 # Technology Stack
+
+## Data Model
+
+![Power BI Star Schema](images/power_bi_star_schema_model.png)
 
 - Snowflake
 - dbt Cloud
@@ -85,6 +93,8 @@ Power BI Dashboard
 
 ## Bronze Layer
 
+![Snowflake Bronze Table](images/snowflake_bronze_table.png)
+
 Purpose:
 
 - Store raw source data
@@ -94,6 +104,8 @@ Purpose:
 ---
 
 ## Silver Layer
+
+![Snowflake Silver Transformation](images/snowflake_silver_transformation.png)
 
 Purpose:
 
@@ -163,6 +175,14 @@ Contains measurable survey metrics including:
 
 # dbt Models
 
+### dbt Lineage
+
+![dbt Lineage Graph](images/dbt_lineage_graph.png)
+
+### dbt Build Success
+
+![dbt Build Success](images/dbt_build_success.png)
+
 ## Staging
 
 - stg_patient_survey
@@ -204,12 +224,6 @@ Examples:
 - Provider IDs must be unique
 - Measure IDs cannot be null
 - Fact table foreign keys must exist in their corresponding dimension tables
-
-All tests successfully pass during:
-
-```
-
-dbt build
 
 ```
 
@@ -277,8 +291,6 @@ The final warehouse supports analysis such as:
 
 # Repository Structure
 
-```
-
 healthcare-analysis/
 
 ├── models/
@@ -304,7 +316,15 @@ healthcare-analysis/
 
 ```
 
----
+## Power BI Dashboards
+
+### Executive Overview
+
+![Executive Dashboard](images/power_bi_executive_overview.png)
+
+### Patient Experience by County
+
+![Patient Experience Dashboard](images/power_bi_patient_experience.png)
 
 # Future Enhancements
 
